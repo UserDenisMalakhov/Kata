@@ -1,6 +1,3 @@
-import java.util.Locale;
-import java.util.Scanner;
-
 /**
  * - Метод умеет выполнять операции сложения, вычитания, умножения и деления с двумя числами: a + b, a - b, a * b, a / b. Данные передаются в одну строку (смотрите пример)! Решения, в которых каждое число и арифмитеческая операция передаются с новой строки считаются неверными.
    - Метод умеет работать как с арабскими (1,2,3,4,5…), так и с римскими (I,II,III,IV,V…) числами.
@@ -14,6 +11,8 @@ import java.util.Scanner;
    - Результатом работы метода с арабскими числами могут быть отрицательные числа и ноль. Результатом работы метода с римскими числами могут быть только положительные числа, если результат работы меньше единицы, выбрасывается исключение
  */
 
+import java.util.Locale;
+import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[] args) throws Exception {
@@ -191,11 +190,6 @@ class Roman2Arabic {
         System.out.println("Initial="+i+", roman="+roman+", arabic="+arabic);
     } */
     
-     /**
-     * Dichotomic search in sorted array of intervals
-     * @param number
-     * @return floor index closest to number
-     */
     private final static int findFloor(final int number, final int firstIndex, final int lastIndex) {
         if(firstIndex==lastIndex)
             return firstIndex;
