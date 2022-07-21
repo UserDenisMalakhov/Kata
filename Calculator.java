@@ -40,8 +40,6 @@ class CalculatorHelper {
             } catch (NumberFormatException e) {
                 rome = true;
                 countLetters++;
-            } catch (ArrayIndexOutOfBoundsException e) {
-                throw new Exception("Input expression must be: <digit> <math operator> <digit>");
             }
         }
 
