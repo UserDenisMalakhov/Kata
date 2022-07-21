@@ -27,6 +27,8 @@ public class Calculator {
 class CalculatorHelper {
     public String calc(String input) throws Exception {
         String[] splitText = input.split(" ");
+        if (splitText.length!=3)
+            throw new Exception("Input expression must be: <digit> <math operator> <digit>");
         Boolean rome = false;
         int letter1, letter2;
 
@@ -48,10 +50,10 @@ class CalculatorHelper {
         }
 
         letter1 = getLetter(splitText[0]);
-        if (letter1 <= 0)
+        if (letter1 <= 0||letter1 > 10)
             throw new Exception("Arab letter should be between 0 and 10");
         letter2 = getLetter(splitText[2]);
-        if (letter2 <= 0)
+        if (letter2 <= 0||letter2 > 10)
             throw new Exception("Arab letter should be between 0 and 10");
         int result = getResult(letter1, letter2, splitText[1]);
         String output;
